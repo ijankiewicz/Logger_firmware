@@ -66,14 +66,14 @@ void main(void)
     adcChannel_scan();
 
 
-//    TIMER_A1->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
-//    TIMER_A1->CCTL[0] = TIMER_A_CCTLN_CCIE; // TACCR0 interrupt enabled
-//    TIMER_A1->CCR[0] = 32768 - 1;
-//    TIMER_A1->CCTL[1] &= ~TIMER_A_CCTLN_CCIFG;
-//    TIMER_A1->CCTL[1] = TIMER_A_CCTLN_CCIE; // TACCR0 interrupt enabled
-//    TIMER_A1->CCR[1] = 16384-1;
-//    TIMER_A1->CTL |= TIMER_A_CTL_TASSEL_1 | // ACLK
-//            TIMER_A_CTL_MC_1;               // up mode
+    TIMER_A1->CCTL[0] &= ~TIMER_A_CCTLN_CCIFG;
+    TIMER_A1->CCTL[0] = TIMER_A_CCTLN_CCIE; // TACCR0 interrupt enabled
+    TIMER_A1->CCR[0] = 32768 - 1;
+    TIMER_A1->CCTL[1] &= ~TIMER_A_CCTLN_CCIFG;
+    TIMER_A1->CCTL[1] = TIMER_A_CCTLN_CCIE; // TACCR0 interrupt enabled
+    TIMER_A1->CCR[1] = 16384-1;
+    TIMER_A1->CTL |= TIMER_A_CTL_TASSEL_1 | // ACLK
+            TIMER_A_CTL_MC_1;               // up mode
 
 
 	P6->DIR |=(BIT3 | BIT4 | BIT5 | BIT6);
