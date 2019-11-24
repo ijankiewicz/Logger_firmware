@@ -46,8 +46,8 @@ void main(void)
 
 
     __enable_irq();
-//    NVIC->ISER[0] = 1 << ((TA1_0_IRQn) & 31);
-//    NVIC->ISER[0] = 1 << ((TA1_N_IRQn) & 31);
+    NVIC->ISER[0] = 1 << ((TA1_0_IRQn) & 31);
+    NVIC->ISER[0] = 1 << ((TA1_N_IRQn) & 31);
     NVIC->ISER[0] = 1 << ((ADC14_IRQn) & 31);
     NVIC->ISER[1] = 1 << ((PORT3_IRQn) & 31);
 
